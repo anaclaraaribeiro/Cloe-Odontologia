@@ -477,8 +477,8 @@ em{font-style:italic}
 
 /* ---------- footer ---------- */
 .foot{background:var(--deeper);color:rgba(255,255,255,.72);padding-block:72px 40px;font-size:.95rem}
-.foot-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 24px}
-.foot-brand{grid-column:1/span 5;display:grid;gap:18px;align-content:start}
+.foot-grid{display:flex;flex-wrap:wrap;align-items:flex-start;gap:40px clamp(48px,6vw,96px)}
+.foot-brand{flex:1 1 320px;display:grid;gap:18px;align-content:start}
 .foot-brand p{max-width:30ch;line-height:1.55}
 .lockup{display:flex;align-items:center;gap:16px;color:#fff}
 .lockup .logo-w{font-size:3rem}
@@ -487,8 +487,8 @@ em{font-style:italic}
 .lockup-img{display:block;height:64px;width:auto}
 .foot-col{grid-column:span 2;display:grid;gap:8px;align-content:start;justify-items:start}
 .foot-col address{font-style:normal;line-height:1.6}
-.foot-col.addr{grid-column:7/span 3}
-.foot-col.contact{grid-column:10/span 3}
+.foot-col.addr{flex:none}
+.foot-col.contact{flex:none}
 .foot-col h4{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500;margin-bottom:8px}
 .foot-col a:hover{color:#fff}
 .foot-col .map-lnk{margin-top:4px;color:var(--teal-l)}
@@ -640,7 +640,7 @@ em{font-style:italic}
   .faq-head,.faq-list{grid-column:1/-1}
   .faq-a p{padding-right:0}
   .cta-card,.map{grid-column:1/-1}
-  .foot-brand{grid-column:1/-1}
+  .foot-brand{flex-basis:100%}
   .foot-col,.foot-col.wide,.foot-col.addr,.foot-col.contact{grid-column:span 6}
   .foot{padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
   .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(244,246,247,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .6s var(--ease)}
