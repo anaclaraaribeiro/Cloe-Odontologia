@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://previalowna-cloeodontologia.vercel.app/sitemap.xml
